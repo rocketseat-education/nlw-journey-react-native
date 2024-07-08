@@ -1,0 +1,28 @@
+@api_url="http://localhost:3333"
+
+POST {{api_url}}/trips
+Content-type: application/json
+
+{
+  "destination": "Florianópolis, Brasil",
+  "starts_at": "2024-08-18T14:25:35.892Z",
+  "ends_at": "2024-08-24T14:25:35.892Z",
+  "emails_to_invite": ["diego.schell.f@gmail.com", "johndoe@acme.com"],
+  "owner_name": "Diego Fernandes",
+  "owner_email": "diego@rocketseat.com.br"
+}
+
+###
+
+GET {{api_url}}/trips/283aa1ad-e21a-4246-aa04-5944f8ce0085/confirm
+Content-type: application/json
+
+###
+
+PUT {{api_url}}/trips/283aa1ad-e21a-4246-aa04-5944f8ce0085
+
+{
+  "destination": "Florianópolis, Brasil",
+  "starts_at": "2024-08-18T14:25:35.892Z",
+  "ends_at": "2024-08-24T14:25:35.892Z"
+}

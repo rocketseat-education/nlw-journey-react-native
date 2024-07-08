@@ -1,0 +1,49 @@
+{
+  "name": "nlw-journey-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/http/server.mjs",
+    "build": "tsup src --format esm",
+    "dev": "tsx watch --env-file .env src/http/server.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
+  },
+  "keywords": [],
+  "author": "Diego Fernandes <diego.schell.f@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "9.0.1",
+    "@fastify/swagger": "8.14.0",
+    "@fastify/swagger-ui": "4.0.0",
+    "@prisma/client": "5.15.1",
+    "dayjs": "1.11.11",
+    "fastify": "4.28.0",
+    "fastify-type-provider-zod": "1.2.0",
+    "nodemailer": "6.9.13",
+    "zod": "^3.23.8"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "2.2.2",
+    "@types/node": "20.11.19",
+    "@types/nodemailer": "6.4.15",
+    "eslint": "8.57.0",
+    "prisma": "5.15.1",
+    "tsup": "8.1.0",
+    "tsx": "4.15.6",
+    "typescript": "^5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@rocketseat/eslint-config/node"
+    ],
+    "rules": {
+      "camelcase": "off"
+    }
+  }
+}
